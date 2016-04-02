@@ -54,9 +54,10 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "test": "NODE_ENV=test ava -v --require babel-register ./test/**/*.spec.js",
+    "test": "NODE_ENV=test nyc ava -v --require babel-register ./test/**/*.spec.js",
     "test:w": "NODE_ENV=test ava -v --require babel-register -w ./test/**/*.spec.js",
-    "start": ""
+    "start": "",
+    "coverage": "npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
