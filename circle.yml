@@ -1,0 +1,15 @@
+dependencies:
+  pre:
+    - npm i -g ava nyc coveralls
+test:
+  post:
+    - npm run coverage
+machine:
+  services:
+    - mongodb
+    - redis
+  environment:
+    CODECLIMATE_REPO_TOKEN: CODECLIMATE_REPO_TOKEN=42940b0f143ac65d7e8a2de8fdfe89d9234a1358a16c978c3b83659926d782e3
+    COVERALLS_REPO_TOKEN: q9rVC49z4e0ndzVEoaupcSHEy0IFDGpKZ
+  node:
+    version: 5.10.0
