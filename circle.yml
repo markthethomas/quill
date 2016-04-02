@@ -1,7 +1,8 @@
 dependencies:
   pre:
-    - npm i -g ava nyc
+    - npm i -g ava nyc coveralls
 test:
+
   post:
     - nyc npm test && nyc report --reporter=text-lcov | coveralls
 machine:
