@@ -1,4 +1,9 @@
 dependencies:
+  pre:
+    - npm i -g ava nyc
+test:
+  post:
+    - nyc npm test && nyc report --reporter=text-lcov | coveralls
 machine:
   services:
     - mongodb
