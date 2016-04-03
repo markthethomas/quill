@@ -25,12 +25,15 @@
     "hpp": "^0.2.0",
     "http-proxy": "^1.13.2",
     "mongoose": "^4.4.10",
+    "mongoose-paginate": "^5.0.0",
+    "mongoose-timestamp": "^0.5.0",
     "morgan": "^1.7.0",
     "pretty-error": "^2.0.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "response-time": "^2.3.1",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "validator": "^5.1.0"
   },
   "devDependencies": {
     "ava": "^0.13.0",
@@ -46,6 +49,7 @@
     "eslint-config-airbnb": "^6.2.0",
     "eslint-plugin-import": "^1.4.0",
     "eslint-plugin-react": "^4.2.3",
+    "faker": "^3.1.0",
     "nyc": "^6.1.1",
     "superagent-as-promised": "^4.0.0",
     "supertest": "^1.2.0",
@@ -54,8 +58,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "test": "NODE_ENV=test nyc ava -v --require babel-register ./test/**/*.spec.js",
-    "test:w": "NODE_ENV=test ava -v --require babel-register -w ./test/**/*.spec.js",
+    "test": "NODE_ENV=test nyc ava -v --require babel-register ./test/**/**/*.spec.js",
+    "test:w": "NODE_ENV=test ava -v --require babel-register -w ./test/**/**/*.spec.js",
     "start": "",
     "coverage": "npm test && nyc report --reporter=text-lcov | coveralls"
   },
