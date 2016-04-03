@@ -1,15 +1,23 @@
 import mongoose, { Schema } from 'mongoose';
+import validator from 'validator';
 import timestamps from 'mongoose-timestamp';
 
-const userSchema = new Schema({
+const emailSchema = new Schema({
   title: String,
-  lastName: Date,
   schedule: {
     send: Date,
     sent: Date,
   },
+  email: {
+    type: String,
+    required: true,
+    validate: {
+      validator: email => validator.isEmail(email),
+      message: '{VALUE} is not a valid email.',
+    },
+  },
   meta: {
-    error: Error,
+    error: Object,
     sent: Boolean,
     user: {
       type: Schema.Types.ObjectId,
@@ -22,8 +30,8 @@ const userSchema = new Schema({
   },
 });
 
-userSchema.methods = {};
+emailSchema.methods = {};
 
-userSchema.plugin(timestamps);
+emailSchema.plugin(timestamps);
 
-export default mongoose.model('users', userSchema);
+export default mongoose.model('emails', emailSchema);
