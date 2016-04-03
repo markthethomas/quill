@@ -61,7 +61,10 @@
     "test": "NODE_ENV=test nyc ava -v --require babel-register --require './test/utils/db' ./test/**/**/*.spec.js",
     "test:w": "NODE_ENV=test ava -v --require babel-register --require './test/utils/db' -w ./test/**/**/*.spec.js",
     "start": "",
-    "coverage": "npm test && nyc report --reporter=text-lcov | coveralls"
+    "lint": "eslint -c .eslintrc.js src test",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "pretest": "npm run lint",
+    "posttest": "npm run coverage"
   },
   "repository": {
     "type": "git",
