@@ -1,8 +1,7 @@
 import test from 'ava';
 
-import Email from '../../../src/server/models/email';
+import Email from '../../../src/server/models/email.model';
 import generateFakeEmail from '../../utils/generate/generateEmailData';
-import '../../utils/db';
 
 // Make sure we clean up after each test
 test.afterEach(async () => await Email.remove({}).exec());
