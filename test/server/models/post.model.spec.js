@@ -1,6 +1,6 @@
 // @flow
 import test from 'ava';
-import Post from '../../../src/server/models/post.model';
+import Post from '../../../src/api/models/post.model';
 import generatePostData from '../../utils/generate/generatePostData';
 
 test.afterEach(async () => await Post.remove({}).exec());

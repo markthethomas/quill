@@ -1,6 +1,6 @@
 import test from 'ava';
 
-import Email from '../../../src/server/models/email.model';
+import Email from '../../../src/api/models/email.model';
 import generateFakeEmail from '../../utils/generate/generateEmailData';
 
 // Make sure we clean up after each test
