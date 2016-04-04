@@ -45,6 +45,7 @@ module.exports = {
         "indent": [2, 2, {"SwitchCase": 1}],
         "no-console": 0,
         "no-alert": 0,
+        "max-len": ["error", 200, 4, {"ignoreUrls": true}],
         "id-length": [2, {"min": 3, "max": 25, "exceptions": ["_", "ws", "io", "id", "t", "fs"]}]
     }
 };

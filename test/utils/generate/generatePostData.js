@@ -1,8 +1,10 @@
 // @flow
-import faker from 'faker';
+import markdownContent from '../../fixtures/post.js';
 
 export default function generatePostData(): Object {
   return {
-    content: faker.lorem.paragraphs(),
+    content: {
+      raw: markdownContent,
+    },
   };
 }
