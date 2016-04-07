@@ -4,6 +4,7 @@
   "description": "Another blogging platform",
   "main": "index.js",
   "dependencies": {
+    "babel-core": "^6.7.4",
     "babel-plugin-add-module-exports": "^0.1.2",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-react-display-name": "^6.5.0",
@@ -14,16 +15,19 @@
     "babel-preset-stage-0": "^6.5.0",
     "babel-register": "^6.7.2",
     "babel-runtime": "^6.6.1",
+    "bluebird": "^3.3.4",
     "body-parser": "^1.15.0",
     "compression": "^1.6.1",
     "concurrently": "^2.0.0",
     "cors": "^2.7.1",
-    "draft-js": "^0.4.0",
+    "draft-js": "^0.3.0",
     "eslint-plugin-react": "^4.2.3",
     "express": "^4.13.4",
     "helmet": "^1.3.0",
     "hpp": "^0.2.0",
     "http-proxy": "^1.13.2",
+    "joi": "^8.0.5",
+    "markdown-it": "^6.0.1",
     "mongoose": "^4.4.10",
     "mongoose-paginate": "^5.0.0",
     "mongoose-timestamp": "^0.5.0",
@@ -36,7 +40,10 @@
     "validator": "^5.1.0"
   },
   "devDependencies": {
-    "ava": "^0.14.0",
+    "ava": "^0.13.0",
+    "axios": "^0.9.1",
+    "babel-cli": "^6.6.5",
+    "babel-core": "^6.7.4",
     "babel-eslint": "^6.0.2",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-plugin-transform-flow-strip-types": "^6.7.0",
@@ -51,6 +58,7 @@
     "eslint-plugin-react": "^4.2.3",
     "faker": "^3.1.0",
     "nyc": "^6.1.1",
+    "request": "^2.69.0",
     "superagent-as-promised": "^4.0.0",
     "supertest": "^1.2.0",
     "supertest-as-promised": "^3.0.0",
@@ -58,10 +66,13 @@
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "test": "NODE_ENV=test nyc ava -v --require babel-register ./test/**/**/*.spec.js",
-    "test:w": "NODE_ENV=test ava -v --require babel-register -w ./test/**/**/*.spec.js",
+    "test": "NODE_ENV=test nyc ava -v --require babel-register --require './test/utils/db' ./test/**/**/*.spec.js",
+    "test:w": "NODE_ENV=test ava -v --require babel-register --require './test/utils/db' -w ./test/**/**/*.spec.js",
     "start": "",
-    "coverage": "npm test && nyc report --reporter=text-lcov | coveralls"
+    "lint": "eslint -c .eslintrc.js src test",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
+    "pretest": "npm run lint",
+    "posttest": "npm run coverage"
   },
   "repository": {
     "type": "git",

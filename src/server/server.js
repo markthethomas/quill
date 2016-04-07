@@ -72,10 +72,13 @@ app.get('/', (req, res) => {
   });
 });
 
-// app.listen(config.appPort, () => {
-//   console.info('----\n==> 🌎  API is running on port %s', config.apiPort);
-//   console.info(`==> 💻  Send requests to http://${config.apiHost}:${config.appPort}`);
-// });
+// Needs better form, guard against test
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(config.appPort, () => {
+    console.info('----\n==> 🌎  API is running on port %s', config.apiPort);
+    console.info(`==> 💻  Send requests to http://${config.apiHost}:${config.appPort}`);
+  });
+}
 
 app.use(NotFound);
 app.use(ErrorHandler);
