@@ -36,7 +36,7 @@
     "validator": "^5.1.0"
   },
   "devDependencies": {
-    "ava": "^0.13.0",
+    "ava": "^0.14.0",
     "babel-eslint": "^6.0.2",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-plugin-transform-flow-strip-types": "^6.7.0",
