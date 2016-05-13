@@ -47,7 +47,7 @@
     "babel-eslint": "^6.0.3",
     "babel-plugin-react-transform": "^2.0.2",
     "babel-plugin-transform-flow-strip-types": "^6.7.0",
-    "babel-plugin-typecheck": "^3.8.0",
+    "babel-plugin-typecheck": "^3.9.0",
     "babel-polyfill": "^6.7.4",
     "babel-register": "^6.7.2",
     "coveralls": "^2.11.9",
