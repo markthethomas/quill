@@ -30,7 +30,8 @@
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "response-time": "^2.3.1",
-    "serve-favicon": "^2.3.0"
+    "serve-favicon": "^2.3.0",
+    "uuid": "^2.0.2"
   },
   "devDependencies": {
     "ava": "^0.13.0",
