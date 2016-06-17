@@ -1,3 +1,8 @@
-module.exports = [
-
-];
+module.exports = {
+	dev: [
+	
+	],
+	prod: [
+	
+	]
+};

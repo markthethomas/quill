@@ -1,5 +1,10 @@
 const webpack = require('webpack');
 
-module.exports = [
-	new webpack.optimize.CommonsChunkPlugin('common.js')
-];
+module.exports = {
+	dev: [
+		new webpack.optimize.CommonsChunkPlugin('common.js')
+	],
+	prod: [
+		new webpack.optimize.CommonsChunkPlugin('common.js')
+	]
+}
