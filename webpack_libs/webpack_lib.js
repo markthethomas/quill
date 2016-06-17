@@ -2,6 +2,9 @@ const webpack = require('webpack');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+const WebpackHtmlTemplate = require('html-webpack-template');
 
 module.exports = {
 	dev: {
@@ -26,8 +29,15 @@ module.exports = {
 			new webpack.optimize.CommonsChunkPlugin({
 				name: 'shared'
 			}),
-			new HtmlWebpackPlugin({}),
-			new ExtractTextPlugin({})
+			new HtmlWebpackPlugin({
+				title: "quill",
+				template: WebpackHtmlTemplate,
+				inject: false
+			}),
+			new ExtractTextPlugin({
+			
+			}),
+			new CleanWebpackPlugin(['../client/build'])
 		]
 	},
 	prod: {
@@ -48,6 +58,19 @@ module.exports = {
 				loaders: ['url']
 			}
 		],
-		plugins: []
+		plugins: [
+			new webpack.optimize.CommonsChunkPlugin({
+				name: 'shared'
+			}),
+			new HtmlWebpackPlugin({
+				title: "quill",
+				template: WebpackHtmlTemplate,
+				inject: false
+			}),
+			new ExtractTextPlugin({
+			
+			}),
+			new CleanWebpackPlugin(['../client/build'])
+		]
 	}
 };
