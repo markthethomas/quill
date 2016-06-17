@@ -2,8 +2,7 @@ const path = require('path');
 // validates the webpack config
 const validate_webpack = require('webpack-validator');
 
-const loaders = require('./webpack_libs/loaders');
-const plugins = require('./webpack_libs/plugins');
+const webpack_lib = require('./webpack_libs/webpack_lib');
 
 const config = {
 	context: path.resolve('client'),
@@ -25,12 +24,12 @@ const config = {
 
 switch(process.env.npm_lifecycle_event) {
 	case 'start':
-		config['module']['loaders'] = loaders['dev'];  
-		config['plugins'] = loaders['dev'];
+		config['module']['loaders'] = webpack_lib['dev']['loaders'];  
+		config['plugins'] = webpack_lib['dev']['plugins'];
 		break;
 	case 'build':
-		config['module']['loaders'] = loaders['prod'];
-		config['plugins'] = plugins['prod'];
+		config['module']['loaders'] = webpack_lib['prod']['loaders'];
+		config['plugins'] = webpack_lib['prod']['plugins'];
 		break;
 }
 
