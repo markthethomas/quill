@@ -7,7 +7,7 @@ const webpack_lib = require('./webpack_libs/webpack_lib');
 const config = {
 	context: path.resolve('client'),
 	entry: {
-		app: './app/app.js'	
+		app: './app/index.jsx'	
 	},
 	output: {
 		path: path.resolve('client/build'),
