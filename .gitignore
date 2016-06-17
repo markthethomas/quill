@@ -34,3 +34,8 @@ node_modules
 
 #Coverage artifacts
 .nyc_ouput
+
+#Temp files
+*.swp
+*.swo
+*.swn
