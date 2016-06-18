@@ -11,7 +11,7 @@ const webpack_lib = require('./webpack_libs/webpack_lib');
 const PATHS = {
 	app: path.join(__dirname, 'client', 'app', 'index.jsx'),
 	style: [
-		path.join(__dirname, 'client', 'app', 'index.css')	
+		path.join(__dirname, 'client', 'app', 'main.css')	
 	],
 	build: path.join(__dirname, 'client', 'build')
 }
