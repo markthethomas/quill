@@ -37,7 +37,7 @@
     "react-dom": "^15.0.0",
     "response-time": "^2.3.1",
     "serve-favicon": "^2.3.0",
-    "validator": "^5.1.0"
+    "validator": "^5.3.0"
   },
   "devDependencies": {
     "ava": "^0.14.0",
