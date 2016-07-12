@@ -50,7 +50,7 @@
     "babel-plugin-typecheck": "^3.8.0",
     "babel-polyfill": "^6.7.4",
     "babel-register": "^6.7.2",
-    "coveralls": "^2.11.9",
+    "coveralls": "^2.11.10",
     "enzyme": "^2.2.0",
     "eslint": "^2.8.0",
     "eslint-config-airbnb": "^8.0.0",
