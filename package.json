@@ -63,7 +63,7 @@
     "supertest": "^1.2.0",
     "supertest-as-promised": "^3.0.0",
     "webpack": "^1.13.0",
-    "webpack-dev-server": "^1.14.1"
+    "webpack-dev-server": "^1.16.0"
   },
   "scripts": {
     "test": "NODE_ENV=test nyc ava -v --require babel-register --require './test/utils/db' ./test/**/**/*.spec.js",
