@@ -27,7 +27,7 @@
     "hpp": "^0.2.0",
     "http-proxy": "^1.13.2",
     "joi": "^8.0.5",
-    "markdown-it": "^7.0.0",
+    "markdown-it": "^8.0.1",
     "mongoose": "^4.4.13",
     "mongoose-paginate": "^5.0.0",
     "mongoose-timestamp": "^0.5.0",
