@@ -58,7 +58,7 @@
     "eslint-plugin-react": "^4.2.3",
     "faker": "^3.1.0",
     "nyc": "^6.1.1",
-    "request": "^2.72.0",
+    "request": "^2.79.0",
     "superagent-as-promised": "^4.0.0",
     "supertest": "^1.2.0",
     "supertest-as-promised": "^3.0.0",
